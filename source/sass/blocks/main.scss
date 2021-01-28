@@ -1,0 +1,15 @@
+.main {
+  width: 100%;
+  padding: 22px 0 24px;
+  border-top: 1px solid $special-gray;
+  border-bottom: 1px solid $special-gray;
+
+}
+
+.main__inner {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  height: 100%;
+}

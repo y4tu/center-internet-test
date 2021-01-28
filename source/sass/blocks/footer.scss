@@ -1,0 +1,22 @@
+.footer {
+  padding: 24px 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer-inner__item {
+  width: 297px;
+  height: 180px;
+  margin-right: 28px;
+  background-color: $special_gray;
+
+  &:last-child {
+    margin-right: 0;
+    width: 309px;
+    background-color: transparent;
+  }
+}

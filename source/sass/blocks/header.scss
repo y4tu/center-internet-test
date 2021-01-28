@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  padding: 19px 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: auto;
+
+  @media (#{$screen-desktop}) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+};
+
+.header-inner__item {
+  margin: 0 0 23px 0;
+
+  @media (#{$screen-desktop}) {
+    margin: 0 23px 0 0;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}

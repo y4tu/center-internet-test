@@ -11,6 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const { src, dest, watch, series, parallel } = require('gulp');
+const babel = require('gulp-babel');
 
 // Styles
 
@@ -32,15 +34,23 @@ const styles = () => {
 
 exports.styles = styles;
 
+//HTML
+
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(gulp.dest("build"))
 }
 
-const scripts = () => {
-  return gulp.src("source/js/**")
-    .pipe(gulp.dest("build/js"))
-    .pipe(sync.stream());
+//JS
+
+const js = () => {
+  return src([
+    'source/js/**.js'
+  ])
+    .pipe(babel({
+      presets: ["@babel/preset-env"]
+    }))
+    .pipe(dest('build/js/'))
 }
 
 // Server
@@ -59,6 +69,8 @@ const server = (done) => {
 }
 
 exports.server = server;
+
+//Images
 
 const images = () => {
   return gulp.src ("source/img/**/*.{jpg,png,svg}")
@@ -100,6 +112,8 @@ const copy = () => {
 
 exports.copy = copy;
 
+//Clean
+
 const clean = () => {
   return del ("build");
 }
@@ -110,6 +124,7 @@ exports.clean = clean;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/js/**.js", gulp.series(js));
   gulp.watch("source/*.html").on("change", gulp.series(html));
 }
 
@@ -119,12 +134,14 @@ const build = gulp.series(
   // images,
   styles,
   sprite,
-  scripts,
+  js,
   html,
+  server,
+  watcher
 );
 
 exports.build = build;
 
 exports.default = gulp.series(
-  build, server, watcher
+  build
 );

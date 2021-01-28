@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  width: 60px;
+  height: 36px;
+
+  @media (#{$screen-tablet}) {
+    width: 80px;
+    height: 72px;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 122px;
+    height: 108px;
+    margin-right: auto;
+  }
+}
+
+.logo__img {
+  width: 100%;
+  height: auto;
+}

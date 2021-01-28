@@ -1,0 +1,14 @@
+.developed {
+  width: 100%;
+}
+
+.developed__item {
+  width: 100%;
+  height: 76px;
+  margin-bottom: 28px;
+  background-color: $special_gray;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

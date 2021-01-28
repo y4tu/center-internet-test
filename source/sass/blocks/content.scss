@@ -1,0 +1,25 @@
+.content {
+  display: grid;
+  grid-template-rows: 210px min-content 200px;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+}
+
+.content__header {
+  width: 100%;
+  background-color: $basic_gray;
+  margin-bottom: 19px;
+}
+
+.content__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.content__footer {
+  width: 100%;
+  background-color: $basic_gray;
+}

@@ -1,0 +1,26 @@
+.popup {
+  position: fixed;
+  top: calc(50% - 285px);
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 571px;
+  background-color: $basic-gray;
+}
+
+.popup__counter {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+}
+
+.popup__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: aqua;
+}

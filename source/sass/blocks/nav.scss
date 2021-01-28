@@ -1,0 +1,15 @@
+.nav {
+  display: block;
+  width: 100%;
+  height: 72px;
+  background-color: $special-gray;
+
+  @media (#{$screen-tablet}) {
+    height: 72px;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 279px;
+    height: 108px;
+  }
+}

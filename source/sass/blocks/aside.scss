@@ -1,0 +1,17 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: 184px;
+  height: 100%;
+}
+
+.aside__item {
+  width: 100%;
+  height: 335px;
+  background-color: $special-gray;
+
+  &:last-child {
+    height: 134px;
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,18 @@
+.page {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr;
+  background-color: $basic-white;
+  min-width: 320px;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+
+  @media (#{$screen-tablet}) {
+    min-width: 768px;
+  }
+
+  @media (#{$screen-desktop}) {
+    min-width: 960px;
+  }
+}
