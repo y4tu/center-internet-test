@@ -17,6 +17,10 @@
   height: 343px;
   background-color: $basic-gray;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
   @media (#{$screen-tablet}) {
     top: calc(50% - 285px);
@@ -24,6 +28,11 @@
     width: 500px;
     height: 571px;
   }
+}
+
+.popup__image {
+  width: auto;
+  height: auto;
 }
 
 .popup__counter {

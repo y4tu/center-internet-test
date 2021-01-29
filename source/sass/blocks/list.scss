@@ -9,6 +9,7 @@
   }
 
   @media (#{$screen-desktop}) {
+    grid-gap: 20px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -16,6 +17,8 @@
 }
 
 .list__item {
+  overflow: hidden;
+
   @media (#{$screen-desktop}) {
     display: block;
     width: 134px;
