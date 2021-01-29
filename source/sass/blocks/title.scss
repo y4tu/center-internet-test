@@ -4,13 +4,12 @@
   height: 72px;
   background-color: $special-gray;
 
-  //@media (#{$screen-tablet}) {
-  //  height: 60px;
-  //}
+  @media (#{$screen-tablet}) {
+    height: 90px;
+  }
 
   @media (#{$screen-desktop}) {
-  width: 513px;
-  height: 108px;
-    margin: 0 auto;
+    width: 513px;
+    height: 108px;
   }
 }

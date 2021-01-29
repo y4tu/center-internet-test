@@ -1,16 +1,33 @@
 .list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   counter-reset: list;
+
+  @media (#{$screen-tablet}) {
+    grid-gap: 40px;
+  }
+
+  @media (#{$screen-desktop}) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 .list__item {
-  display: block;
-  width: 134px;
-  height: 153px;
-  margin: 0 21px 19px 0;
-  background-color: $basic_gray;
+  @media (#{$screen-desktop}) {
+    display: block;
+    width: 134px;
+    height: 153px;
+    background-color: $basic_gray;
+  }
 
   &:nth-child(5n) {
-    margin-right: 0;
+
+    @media (#{$screen-desktop}) {
+      margin-right: 0;
+    }
   }
 
   &:before {

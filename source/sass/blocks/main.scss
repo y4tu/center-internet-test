@@ -4,12 +4,36 @@
   border-top: 1px solid $special-gray;
   border-bottom: 1px solid $special-gray;
 
+  @media (#{$screen-tablet}) {
+    padding: 40px 0;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding: 22px 0 24px;
+  }
 }
 
 .main__inner {
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-template-rows: 1fr;
+  grid-template-areas:
+                        "c"
+                        "a";
   grid-gap: 20px;
   height: 100%;
+
+  @media (#{$screen-tablet}) {
+    grid-gap: 40px;
+  }
+
+  @media (#{$screen-desktop}) {
+    grid-template-areas: "a c";
+    grid-gap: 20px;
+  }
+}
+
+.main-inner__item {
+
+  @media (#{$screen-desktop}) {
+    margin: 0;
+  }
 }

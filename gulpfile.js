@@ -11,8 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const { src, dest, watch, series, parallel } = require('gulp');
-const babel = require('gulp-babel');
+const { src, dest, watch, series, parallel } = require(`gulp`);
+const babel = require(`gulp-babel`);
 
 // Styles
 
@@ -45,12 +45,12 @@ const html = () => {
 
 const js = () => {
   return src([
-    'source/js/**.js'
+    `source/js/**.js`
   ])
     .pipe(babel({
       presets: ["@babel/preset-env"]
     }))
-    .pipe(dest('build/js/'))
+    .pipe(dest(`build/js/`))
 }
 
 // Server

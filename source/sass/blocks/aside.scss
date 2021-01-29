@@ -1,17 +1,38 @@
 .aside {
+  grid-area: a;
   display: flex;
   flex-direction: column;
-  width: 184px;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 489px;
   height: 100%;
+
+  @media (#{$screen-desktop}) {
+    width: 184px;
+  }
 }
 
 .aside__item {
   width: 100%;
   height: 335px;
   background-color: $special-gray;
+  margin-bottom: 20px;
+
+  @media (#{$screen-tablet}) {
+    margin-bottom: 40px;
+  }
+
+  @media (#{$screen-desktop}) {
+    margin-bottom: 0;
+  }
 
   &:last-child {
-    height: 134px;
-    margin-top: auto;
+    height: auto;
+    margin-bottom: 0;
+
+    @media (#{$screen-desktop}) {
+      height: auto;
+      margin-top: auto;
+    }
   }
 }

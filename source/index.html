@@ -21,58 +21,15 @@
 
 <main class="main">
   <div class="main__inner main-inner container">
-    <aside class="main-inner__aside aside">
+    <aside class="main-inner__item main-inner__aside aside">
       <div class="aside__item"></div>
       <div class="aside__item">
         <img src="./img/picture.jpg" alt="Picture" width="182" height="133">
       </div>
     </aside>
-    <section class="main-inner__content content">
+    <section class="main-inner__item main-inner__content content">
       <div class="content__header"></div>
-      <ol class="content__list list">
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden">1</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/1st-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden" id="2">2</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/2nd-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden" id="3">3</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/3rd-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden" id="4">4</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/4th-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden" id="5">5</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/5th-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden" id="6">6</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/6th-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-<!--        <li class="list__item item">-->
-<!--          <span class="item__counter counter visually-hidden" id="7">7</span>-->
-<!--          <button type="button" class="item__button button">-->
-<!--            <img class="button__img" alt="Card image" src="./img/7th-item.jpg" width="134" height="153">-->
-<!--          </button>-->
-<!--        </li>-->
-      </ol>
+      <ol class="content__list list"></ol>
       <div class="content__footer content-footer">
         <div class="content-footer__item"></div>
         <div class="content-footer__item"></div>
@@ -94,11 +51,6 @@
   </div>
 </footer>
 
-<section class="popup visually-hidden">
-  <p class="popup__counter"></p>
-  <div class="popup__close"></div>
-</section>
-
 <template id="card">
   <li class="list__item item">
     <span class="item__counter counter visually-hidden">1</span>
@@ -109,6 +61,13 @@
 </template>
 
 <template id="popup">
+  <section class="popup">
+    <div class="popup__wrapper">
+      <img src="" alt="Popup image" class="popup__image"/>
+      <p class="popup__counter"></p>
+      <div class="popup__close"></div>
+    </div>
+  </section>
 </template>
 
 <script src="js/main.js"></script>

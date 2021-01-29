@@ -2,10 +2,12 @@
   width: 320px;
   max-width: 320px;
   margin: 0 auto;
+  padding: 0 20px;
 
   @media (#{$screen-tablet}) {
     width: 768px;
     max-width: 768px;
+    padding: 0 40px;
   }
 
   @media (#{$screen-desktop}) {

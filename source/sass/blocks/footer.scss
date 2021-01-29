@@ -1,22 +1,53 @@
 .footer {
   padding: 24px 0;
+
+  @media (#{$screen-tablet}) {
+    padding: 40px 0;
+  }
+
+  @media (#{$screen-desktop}) {
+    padding: 24px 0;
+  }
 }
 
 .footer__inner {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
+
+  @media (#{$screen-desktop}) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-inner__item {
-  width: 297px;
+  width: 100%;
   height: 180px;
-  margin-right: 28px;
   background-color: $special_gray;
+  margin: 0 0 20px 0;
+
+  @media (#{$screen-tablet}) {
+    margin: 0 0 40px 0;
+  }
+
+  @media (#{$screen-desktop}) {
+    width: 297px;
+    margin: 0;
+  }
+
+  &:nth-child(even) {
+    @media (#{$screen-desktop}) {
+      margin: 0 0 0 auto;
+    }
+  }
 
   &:last-child {
-    margin-right: 0;
-    width: 309px;
-    background-color: transparent;
+    height: auto;
+    margin: 0;
+
+    @media (#{$screen-desktop}) {
+      margin: 0 0 0 auto;
+    }
   }
 }

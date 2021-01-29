@@ -1,17 +1,17 @@
 .logo {
   display: flex;
   width: 60px;
-  height: 36px;
+  height: auto;
 
   @media (#{$screen-tablet}) {
     width: 80px;
-    height: 72px;
+    height: auto;
   }
 
   @media (#{$screen-desktop}) {
     width: 122px;
-    height: 108px;
-    margin-right: auto;
+    height: auto;
+    margin: 0;
   }
 }
 
