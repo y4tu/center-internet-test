@@ -8,16 +8,10 @@ Install deps
 npm i
 ```
 
-Run dev mode
+Run biuld
 
 ```sh
-npm run start
-```
-
-Run prod mode
-
-```sh
-npm run prod
+npm run build
 ```
 
 Author: **Pavel Korchagin**
