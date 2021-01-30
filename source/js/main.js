@@ -123,6 +123,7 @@ const onCrossClick = () => {
   const element = body.querySelector(`.popup`);
 
   body.removeChild(element);
+  document.removeEventListener(`keydown`, onPopupClose);
 }
 
 const cardsList = document.querySelectorAll(`.item`);
